@@ -37,6 +37,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 <div class="wrap">
     <h1>CSS to Elementor Global Classes</h1>
+    <p>Requires Elementor to be installed and Editor v4 active. Check SELECT * FROM wp_postmeta WHERE meta_key = '_elementor_global_classes' returns 1 row.</p>
+    <p>Backup your database before clicking Update Elementor Global Classes. Overwrites any existing gobal classes.</p>
+    <p>Supports single class declarations - no support for multiple classes like .toggle-icon .middle-bar{} </p>
+    <p>Supports properties with a single value - either a value like 10px or a variable like var(--space-s)</p>
+    <p>No support for properties with multiple values like {border:solid 1px #CCCCCC;} Use a variable  {border:var(--border-s);}</p>
+    <p>No support for id classes like #mybtn, element classes like body or h1, h2, h3, pseudo classes like ::before ::after, @media queries or @container</p>
     <form method="post">
         <h2>Minified CSS Input:</h2>
         <textarea name="css_input" rows="10" style="width: 100%;"><?php echo esc_textarea($_POST['css_input'] ?? ''); ?></textarea>
