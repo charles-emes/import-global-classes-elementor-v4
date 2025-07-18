@@ -9,7 +9,11 @@ Overwrites any existing gobal classes.
 Most of these limitations are due to the current implementation of the Editor v4 interface: 
 
 Supports single class declarations - no support for multiple classes like .toggle-icon .middle-bar{}
+
 Supports properties with a single value - either a value like 10px or a variable like var(--space-s)
+
 No support for properties with multiple values like {border:solid 1px #CCCCCC;} Use a variable {border:var(--border-s);}
+
 No support for id classes like #mybtn, element classes like body or h1, h2, h3 , pseudo classes like ::before ::after
+
 No support for @media queries or @container
